@@ -1,0 +1,35 @@
+:root {
+    --background:#0F1020;
+    --primary:#4F46E5;
+    --secondary:#1E1B4B;
+    --accent:#06B6D4;
+    --text:#F3F4F6;
+    --border:#2E2A75;
+}
+
+.dashboard {
+    background-color: var(--background);
+}
+
+.topBar {
+    background-color: var(--secondary);
+
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-color: var(--border);
+
+
+}
+
+
+.card {
+    background-color: var(--secondary);
+
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: var(--border);
+
+    color: var(--text);
+}
+
