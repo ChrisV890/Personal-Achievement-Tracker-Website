@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
 :root {
     --background:#0F1020;
     --primary:#4F46E5;
@@ -18,10 +22,10 @@
     border-bottom-width: 2px;
     border-color: var(--border);
 
-
 }
 
 
+/*Dashboard Section 2*/
 .card {
     background-color: var(--secondary);
 
@@ -33,3 +37,28 @@
     color: var(--text);
 }
 
+
+
+
+
+
+
+/*Dashboard Section 1*/
+.progressContainer {
+    width:100%;
+    height:20px;
+    background-color:black;
+}
+
+.progressBar {
+    width: 33%;
+    height:20px;
+    background-color:white;
+}
+
+.category {
+    border-style:solid;
+    border-width: 2px;
+    border-color: var(--primary);
+    font-family: "Space Grotesk", sans-serif;
+}
