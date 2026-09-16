@@ -25,7 +25,6 @@
 }
 
 
-/*Dashboard Section 2*/
 .card {
     background-color: var(--secondary);
 
@@ -61,4 +60,31 @@
     border-width: 2px;
     border-color: var(--primary);
     font-family: "Space Grotesk", sans-serif;
+}
+
+
+
+
+/*Dashboard Section 2*/
+.achievementList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.achievementBox {
+    background-color: var(--primary);
+    border-style: solid;
+    border-width: 1px;
+    border-radius:10px;
+    border-color: var(--border);
+    padding: 10px
+}
+
+
+
+
+/*Dashboard Section 3*/
+.addTaskButton {
+    background-color: var(--accent);
 }
