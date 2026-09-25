@@ -12,30 +12,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="signupPage">
 
-    <div>
-        <h1>Sign In</h1>
+    <div class="signupCard">
+
+        <h1>Achievement Tracker</h1>
+
+        <h2>Sign In</h2>
 
         <form id="loginForm">
 
-            <label for="loginEmail">Email</label>
-            <input type="email" id="loginEmail">
+            <div class="signupField">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail">
+            </div>
 
-            <label for="loginPassword">Password</label>
-            <input type="password" id="loginPassword">
+            <div class="signupField">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword">
+            </div>
 
-            <button type="submit">
+            <button type="submit" class="signupButton">
                 Sign In
             </button>
 
         </form>
 
-        <p>
+        <p class="signupLogin">
             Don't have an account?
             <a href="signup.html">Create Account</a>
         </p>
+
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase.js"></script>

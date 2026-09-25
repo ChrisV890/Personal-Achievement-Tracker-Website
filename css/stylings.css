@@ -70,26 +70,99 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
 .achievementBox {
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    padding: 18px;
+    margin-bottom: 12px;
+
+    color: var(--text);
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.achievementBox:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.achievementBox h3 {
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.achievementBox p {
+    margin-bottom: 5px;
+}
+
+.achievementBox p:nth-of-type(2) {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.achievementBox p:nth-of-type(3) {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+.achievementBox button {
+    padding: 7px 14px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.achievementBox button:first-of-type {
     background-color: var(--primary);
-    border-style: solid;
-    border-width: 1px;
-    border-radius:10px;
-    border-color: var(--border);
-    padding: 10px
+    color: white;
+
+    border: 1px solid var(--primary);
+}
+
+.achievementBox button:first-of-type:hover {
+    filter: brightness(1.15);
+}
+
+.achievementBox button:last-of-type {
+    background-color: transparent;
+    color: #ef4444;
+
+    border: 1px solid #ef4444;
+
+    margin-left: 6px;
+}
+
+.achievementBox button:last-of-type:hover {
+    background-color: #ef4444;
+    color: white;
 }
 
 
 /*Dashboard Section 3*/
 .addAchievementButton {
-    background-color: var(--accent);
+    padding: 5px;
+    border: 1px solid var(--primary);
+
 }
-
-
-
-
 
 
 /*add task hidden window*/
@@ -98,25 +171,132 @@
     inset: 0;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.65);
+
+    z-index: 50;
 }
 
 .modalWindow {
-    background-color: var(--primary);
+    width: 420px;
+
+    padding: 30px;
+
+    background-color: var(--secondary);
+
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 25px;
-    width: 400px;
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.modalTitle {
+    margin-bottom: 25px;
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.modalField {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 18px;
+}
+
+.modalField label {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.modalInput {
+    color: var(--text);
+    width: 100%;
+
+    padding: 10px 12px;
+
+    background-color: var(--background);
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    outline: none;
+}
+
+/**
+.modalInput option {
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+#achievementCategory {
+    color: var(--text);
+    background-color: var(--background);
+
+    cursor: pointer;
+}
+**/
+
+.modalInput:focus {
+    border-color: var(--primary);
+}
+
+.modalField textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.modalCancel,
+.modalCreate {
+    padding: 10px 18px;
+    color: var(--text);
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.modalCancel {
+    background-color: transparent;
+
+    border: 1px solid var(--border);
+}
+
+.modalCreate {
+    background-color: var(--primary);
+
+    color: white;
+
+    border: 1px solid var(--primary);
+}
+
+.modalCreate:hover {
+    filter: brightness(1.1);
 }
 
 .hidden {
     display: none;
 }
 
-
+#userEmail {
+    color: white;
+}
 
 
 /*top bar stylings*/
@@ -127,4 +307,137 @@
     border-radius: 8px;
     padding: 6px 15px;
     cursor: pointer;
+}
+
+
+
+
+
+/*signup*/
+.signupPage {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background);
+}
+
+.signupCard {
+    width: 420px;
+
+    padding: 35px;
+
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+.signupCard h1 {
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--primary);
+
+    margin-bottom: 8px;
+}
+
+.signupCard h2 {
+    text-align: center;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    color: white;
+
+    margin-bottom: 30px;
+}
+
+.signupField {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 18px;
+}
+
+.signupField label {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: white;
+}
+
+.signupField input {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    background-color: var(--background);
+
+    color: white;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    outline: none;
+}
+
+.signupField input:focus {
+    border-color: var(--primary);
+}
+
+.signupButton {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-top: 8px;
+
+    background-color: var(--primary);
+
+    color: white;
+
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.signupButton:hover {
+    filter: brightness(1.15);
+}
+
+.signupLogin {
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #9ca3af;
+}
+
+.signupLogin a {
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.signupLogin a:hover {
+    text-decoration: underline;
 }

@@ -10,16 +10,17 @@
 
 <body class="dashboard flex flex-col h-screen overflow-hidden">
     <!--Top Bar, purple one-->
+    <!--DO NOT REMOVE, LOAD BEARING BUTTON??????-->
     <div class="topBar p-2">
         <div class="grid grid-rows-1 gap-2 place-content-end">
 
             
             <div id="loggedOutControls">
-                <button id="signInButton" class="accountButton">
+                <button id="signInButton" class="accountButton hidden">
                     Sign In
                 </button>
 
-                <button id="signUpButton" class="accountButton">
+                <button id="signUpButton" class="accountButton hidden">
                     Sign Up
                 </button>
             </div>
@@ -111,30 +112,42 @@
 
         <div class="modalWindow">
 
-            <h2>New Achievement</h2>
+            <h2 class="modalTitle">New Achievement</h2>
 
-            <label>Title</label>
-            <input type="text" id="achievementTitle">
+            <div class="modalField">
+                <label for="achievementTitle">Title</label>
+                <input type="text" id="achievementTitle" class="modalInput">
+            </div>
 
-            <label>Description</label>
-            <textarea id="achievementDescription"></textarea>
+            <div class="modalField">
+                <label for="achievementDescription">Description</label>
+                <textarea id="achievementDescription" class="modalInput"></textarea>
+            </div>
 
-            <label>XP</label>
-            <input type="number" id="achievementXP">
+            <div class="modalField">
+                <label for="achievementCategory">Category</label>
+                <select id="achievementCategory" class="modalInput">
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Social">Social</option>
+                    <option value="Financial">Financial</option>
+                </select>
+            </div>
 
-            <label for="achievementCategory">Category</label>
+            <div class="modalField">
+                <label for="achievementXP">XP</label>
+                <input type="number" id="achievementXP" class="modalInput">
+            </div>
 
-            <select id="achievementCategory">
-                <option value="Personal">Personal</option>
-                <option value="Work">Work</option>
-                <option value="School">School</option>
-                <option value="Social">Social</option>
-                <option value="Financial">Financial</option>
-            </select>
+            <div class="modalButtons">
+                <button id="closeAchievementModal" class="modalCancel">
+                    Cancel
+                </button>
 
-            <div>
-                <button id="closeAchievementModal">Cancel</button>
-                <button id="createAchievementButton">Create</button>
+                <button id="createAchievementButton" class="modalCreate">
+                    Create
+                </button>
             </div>
 
         </div>
