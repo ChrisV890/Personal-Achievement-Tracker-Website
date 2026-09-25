@@ -25,7 +25,7 @@ signupForm.addEventListener("submit", async function(event) {
 
     console.log(data);
     alert("Account created!");
-    window.location.href = "dash.html";
+    window.location.href = "index.html";
 
 
 });

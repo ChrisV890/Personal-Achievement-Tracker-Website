@@ -20,5 +20,5 @@ loginForm.addEventListener("submit", async function(event) {
     console.log(data);
     alert("Login successful!");
 
-    window.location.href = "dash.html";
+    window.location.href = "index.html";
 });
