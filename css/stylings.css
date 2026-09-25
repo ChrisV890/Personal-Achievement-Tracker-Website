@@ -82,9 +82,49 @@
 }
 
 
-
-
 /*Dashboard Section 3*/
-.addTaskButton {
+.addAchievementButton {
     background-color: var(--accent);
+}
+
+
+
+
+
+
+/*add task hidden window*/
+.modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalWindow {
+    background-color: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 25px;
+    width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+/*top bar stylings*/
+.accountButton {
+    background-color: var(--primary);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 15px;
+    cursor: pointer;
 }

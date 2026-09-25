@@ -10,12 +10,31 @@
 
 <body class="dashboard flex flex-col h-screen overflow-hidden">
     <!--Top Bar, purple one-->
-    <div class="topBar p-2 grid grid-cols-1">
-        <div class="grid grid-rows-2 gap-2 place-content-end">
-            <div class="bg-blue-500 p-1">1</div>
-            <div class="bg-blue-500 p-1">2</div>
+    <div class="topBar p-2">
+        <div class="grid grid-rows-1 gap-2 place-content-end">
+
+            
+            <div id="loggedOutControls">
+                <button id="signInButton" class="accountButton">
+                    Sign In
+                </button>
+
+                <button id="signUpButton" class="accountButton">
+                    Sign Up
+                </button>
+            </div>
+            
+            <div id="loggedInControls" class="hidden">
+                <span id="userEmail"></span>
+
+                <button id="logoutButton" class="accountButton">
+                    Log Out
+                </button>
+            </div>
+
         </div>
     </div>
+
 
     <!--Achievement Sections, green bars-->
     <div class="flex-1 min-h-0 p-5"> 
@@ -63,17 +82,42 @@
 
             <!--Section 3 Bottom Bar-->
             <div class="card h-10 col-span-2 text-center">
-                <button class="addTaskButton"> Add Task</button>
+                <button class="addAchievementButton" id="addAchievementButton"> Add Achievement</button>
             
             
             </div>
         </div>
     </div>
 
+    <!--Popup for adding achievement-->
+    
+    <div id="achievementModal" class="modal hidden">
+
+        <div class="modalWindow">
+
+            <h2>New Achievement</h2>
+
+            <label>Title</label>
+            <input type="text" id="achievementTitle">
+
+            <label>Description</label>
+            <textarea id="achievementDescription"></textarea>
+
+            <label>XP</label>
+            <input type="number" id="achievementXP">
+
+            <div>
+                <button id="closeAchievementModal">Cancel</button>
+                <button id="createAchievementButton">Create</button>
+            </div>
+
+        </div>
+
+    </div>
 
 
-
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
 <script src="js/dash.js"></script>
 </body>
 
